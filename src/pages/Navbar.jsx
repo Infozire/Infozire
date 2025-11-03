@@ -1,0 +1,110 @@
+import React, { useState } from "react";
+import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
+import logo from "../assets/info.png";
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      {/* Navbar */}
+      <header className="fixed top-0 left-0 right-0 z-30">
+        <div className="flex items-center justify-between px-8 py-4 
+          bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 
+          backdrop-blur-lg shadow-lg">
+          
+          {/* Logo + Name */}
+          <div className="flex items-center gap-3">
+            <img
+              src={logo}
+              alt="Infozire Logo"
+              className="h-12 w-auto object-contain"
+            />
+            <h1 className="text-2xl md:text-3xl font-bold tracking-wide text-white">
+              INFO<span className="text-orange-500">ZIRE</span>
+            </h1>
+          </div>
+
+          {/* Toggle Button */}
+          <button
+            onClick={() => setOpen((prev) => !prev)}
+            className="p-2 text-white focus:outline-none md:hidden"
+            aria-label="Toggle menu"
+          >
+            {open ? (
+              <XMarkIcon className="h-7 w-7" />
+            ) : (
+              <Bars3Icon className="h-7 w-7" />
+            )}
+          </button>
+
+          {/* Desktop Links */}
+     <nav className="hidden md:flex items-center gap-8 text-white font-medium">
+  {["Features", "About", "Services", "Blog", "Contact", "Careers"].map((item) => (
+    <a
+      key={item}
+      href={`/${item.toLowerCase()}`}
+      className="relative group transition-all duration-300"
+    >
+      {item}
+      <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+    </a>
+  ))}
+  <a
+    href="#"
+    className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+  >
+    Get Started
+  </a>
+</nav>
+
+        </div>
+      </header>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 
+          bg-gradient-to-b from-slate-900/95 via-slate-800/95 to-black/95 
+          backdrop-blur-lg text-white transform transition-transform duration-300 z-50 shadow-xl
+          ${open ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="flex justify-between items-center p-4 border-b border-white/20">
+          <h2 className="font-semibold text-lg">Menu</h2>
+          <XMarkIcon
+            className="h-7 w-7 cursor-pointer"
+            onClick={() => setOpen(false)}
+          />
+        </div>
+
+        <nav className="flex flex-col p-4 gap-4">
+          {["Features", "About", "Services", "Blog", "Contact", "Careers"].map((item) => (
+            <a
+              key={item}
+              href={`/${item.toLowerCase()}`}
+              className="hover:text-blue-400 transition-colors duration-300"
+              onClick={() => setOpen(false)}
+            >
+              {item}
+            </a>
+          ))}
+          <a
+            href="#"
+            className="mt-4 px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+          >
+            Get Started
+          </a>
+        </nav>
+      </div>
+
+      {/* Backdrop */}
+      {open && (
+        <div
+          onClick={() => setOpen(false)}
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+        />
+      )}
+    </>
+  );
+};
+
+export default Navbar;
