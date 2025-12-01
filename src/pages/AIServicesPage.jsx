@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 const AIServicesPage = () => {
+      const navigate = useNavigate();
+
     return (
         <div className="min-h-screen bg-gray-900 text-white p-8">
             <h1 className="text-3xl font-bold mb-6 text-orange-500">Industries We Serve with AI</h1>
@@ -34,9 +37,12 @@ const AIServicesPage = () => {
                 Whether you’re a small shop or a growing enterprise, Infozire AI solutions give you the edge to thrive.
             </p>
 
-            <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">
-                🚀 Explore AI Solutions with Infozire
-            </button>
+            <button
+      onClick={() => navigate("/services/ai-automation")}
+      className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition"
+    >
+      🚀 Explore AI Solutions with Infozire
+    </button>
 
             <section className="mt-16 bg-gray-800 rounded-xl p-8 shadow-lg">
                 <h3 className="text-xl font-semibold text-orange-500 mb-4">₹1 Post Generator – Affordable Branding for Everyone</h3>

@@ -12,25 +12,44 @@ import CloudSolutions from "./pages/services/CloudSolutions";
 import DigitalMarketing from "./pages/services/DigitalMarketing.jsx";
 import AISolutions from "./pages/services/AISolutions.jsx";
 import AIServicesPage from './pages/AIServicesPage.jsx';
-
+import MobileAppDevelopment from "./pages/services/MobileAppDevelopment.jsx";
+import AIAndAutomation from "./pages/services/AIAndAutomation.jsx";
+import UIUXPage from "./pages/services/UIUXPage.jsx";
+import MaintenanceSupport from "./pages/services/MaintenanceSupport.jsx";
+import GraphicDesign from "./pages/services/GraphicDesign.jsx";
+import VideoEditing from "./pages/services/VedioEditing.jsx";
+import EcommerceDevelopment from "./pages/services/EcommerceDevelopment.jsx";
+import ITConsulting from "./pages/services/ITConsulting.jsx";
+import APIDevelopment from "./pages/services/APIDevelopment.jsx";
+import TestingQA from "./pages/services/TestingQA.jsx";
+import ScrollToTop from "./pages/ScrollToTop.jsx";
 export default function App() {
   return (
     <Router>
+       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/features" element={<Features />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/hero" element={<HeroSection />} />
-        <Route path="/services/software-development" element={<SoftwareDevelopment />} />
+        <Route path="/services/software-web-development" element={<SoftwareDevelopment />} />
         <Route path="/services/website-development" element={<WebsiteDevelopment />} />
-        <Route path="/services/cloud-solutions" element={<CloudSolutions />} />
-        <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+        <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
+        <Route path="/services/cloud-devops" element={<CloudSolutions />} />
+        <Route path="/services/digital-branding" element={<DigitalMarketing />} />
         <Route path="/services/ai-solutions" element={<AISolutions />} />
-        <Route path="/ai-services" element={<AIServicesPage />} />
-
+        <Route path="/services/ai-automation" element={<AIAndAutomation />} />
+        <Route path="/services/ui-ux-design" element={<UIUXPage />} />
+        <Route path="/services/maintenance-support" element={<MaintenanceSupport />} />
+        <Route path="/services/graphic-design" element={<GraphicDesign />} />
+        <Route path="/services/video-editing" element={<VideoEditing />} />
+        <Route path="/services/ecommerce-development" element={<EcommerceDevelopment />} />
+        <Route path="/services/it-consulting" element={<ITConsulting />} />
+        <Route path="/services/api-development" element={<APIDevelopment />} />
+        <Route path="/services/testing-qa" element={<TestingQA />} />
 
       </Routes>
     </Router>

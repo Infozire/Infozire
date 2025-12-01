@@ -1,0 +1,246 @@
+/* =============== BRAND COLORS =============== */
+:root {
+  --primary: #003B73;
+  --secondary: #0056A6;
+  --accent: #4BB5FF;
+  --dark-bg: #021F2F;
+  --white: #ffffff;
+}
+
+/* =============== MAIN SECTION =============== */
+.services-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ padding: 120px 0 40px 0;   /* ⬅ ADD THIS TOP PADDING */
+  font-family: 'Poppins', sans-serif;
+}
+/* -----------------------------------
+   Scroll Reveal Base
+----------------------------------- */
+.reveal {
+  opacity: 0;
+  transition: all 0.9s ease-out;
+}
+
+/* ------------------------
+   Fade Up Animation
+------------------------- */
+.fade-up {
+  transform: translateY(40px);
+}
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------
+   Fade Left
+------------------------- */
+.fade-left {
+  transform: translateX(-50px);
+}
+.fade-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ------------------------
+   Fade Right
+------------------------- */
+.fade-right {
+  transform: translateX(50px);
+}
+.fade-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ------------------------
+   Zoom In
+------------------------- */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in.active {
+  animation: zoomIn 1.2s ease-out forwards;
+}
+
+.services-container {
+  width: 90%;
+  max-width: 1100px;
+  background: var(--dark-bg);
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  min-height: 100px;   /* reduced height */
+}
+.back-btn {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #ffffff;
+  color: #111;
+  transform: translateX(-4px);
+}
+
+/* =============== LEFT SIDE =============== */
+.left-side {
+  width: 65%;
+  padding: 25px;
+  color: var(--white);
+}
+
+.services-logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.services-subtitle {
+  font-size: 16px;
+  color: var(--accent);
+}
+
+.services-title {
+  margin: 5px 0 18px 0;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ---------------- Services Two Column ---------------- */
+.services-list {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ---------------- each service box ---------------- */
+.service-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px 15px;
+  border-radius: 40px;
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+  opacity: 0;                     /* hidden before animation */
+  animation: fadeUp 0.6s forwards;
+}
+
+/* Animation delay for stagger */
+.column .service-box:nth-child(1) { animation-delay: 0.1s; }
+.column .service-box:nth-child(2) { animation-delay: 0.2s; }
+.column .service-box:nth-child(3) { animation-delay: 0.3s; }
+.column .service-box:nth-child(4) { animation-delay: 0.4s; }
+.column .service-box:nth-child(5) { animation-delay: 0.5s; }
+.column .service-box:nth-child(6) { animation-delay: 0.6s; }
+.column .service-box:nth-child(7) { animation-delay: 0.7s; }
+
+/* hover animation */
+.service-box:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(75, 181, 255, 0.15);
+  box-shadow: 0 6px 16px rgba(75,181,255,0.4);
+}
+
+/* number circle */
+.service-number {
+  background: var(--secondary);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--white);
+  font-size: 15px;
+}
+
+.service-text {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* =============== RIGHT SIDE BACKGROUND =============== */
+.right-side {
+  width: 35%;
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+  min-height: 330px;
+}
+
+/* Curved gradients */
+.curve-layer {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  border-radius: 200px 0 0 200px;
+  transform: skewX(-15deg);
+}
+
+.layer1 {
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+.layer2 {
+  background: linear-gradient(90deg, rgba(0,86,166,0.4), transparent);
+  right: -80px;
+}
+.layer3 {
+  background: linear-gradient(90deg, rgba(255,255,255,0.08), transparent);
+  right: -40px;
+}
+
+/* =============== Animations =============== */
+@keyframes fadeUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* =============== Responsive =============== */
+@media (max-width: 900px) {
+  .services-container {
+    flex-direction: column;
+  }
+  .right-side {
+    width: 100%;
+    height: 150px;
+  }
+  .services-list {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
+}

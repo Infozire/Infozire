@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
-import logo from "../assets/info.png";
+import logo from "../assets/infozire.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -40,7 +40,15 @@ const Navbar = () => {
 
           {/* Desktop Links */}
      <nav className="hidden md:flex items-center gap-8 text-white font-medium">
-  {["Features", "About", "Services", "Blog", "Contact", "Careers"].map((item) => (
+<a className="mr-6"    href="/">
+  <span className="px-3 py-1  text-orange-400 rounded-full">
+    Home
+  </span>
+</a>
+
+
+
+  {["About", "Services","Features",  "Blog","Contact"].map((item) => (
     <a
       key={item}
       href={`/${item.toLowerCase()}`}
@@ -77,7 +85,7 @@ const Navbar = () => {
         </div>
 
         <nav className="flex flex-col p-4 gap-4">
-          {["Features", "About", "Services", "Blog", "Contact", "Careers"].map((item) => (
+          {["Features", "About", "Services", "Blog", "Contact"].map((item) => (
             <a
               key={item}
               href={`/${item.toLowerCase()}`}

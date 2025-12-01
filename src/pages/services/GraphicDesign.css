@@ -1,0 +1,194 @@
+/* PAGE WRAPPER */
+.graphic-page {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #fdf6f0; /* soft light background for graphic design module */
+}
+
+/* HERO SECTION */
+.graphic-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: linear-gradient(135deg, #f5a623, #f76b1c); /* vibrant gradient hero */
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  color: #fff;
+}
+
+.graphic-hero-title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  animation: fadeInSlide 1.2s ease forwards;
+}
+
+.graphic-hero-sub {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+  max-width: 500px;
+  animation: fadeInSlide 1.5s ease forwards;
+}
+
+.graphic-cta {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  animation: fadeInSlide 1.8s ease forwards;
+}
+
+.graphic-hero-img {
+  width: 450px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: floatGraphic 3s infinite ease-in-out;
+}
+
+/* HIGHLIGHTS SECTION */
+.graphic-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 80px 10%;
+}
+
+.highlight-card-graphic {
+  flex: 1 1 220px;
+  background-color: #fff6f0;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.highlight-card-graphic:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* FEATURES SECTION */
+.graphic-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 80px 10%;
+}
+
+.feature-card-graphic {
+  background-color: #fff9f5;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.feature-card-graphic:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-card-graphic h5 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.feature-card-graphic p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* INDUSTRIES SECTION */
+.graphic-industries {
+  padding: 80px 10%;
+}
+
+.industry-grid-graphic {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.industry-card-graphic {
+  flex: 1 1 180px;
+  background-color: #fff2eb;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  font-weight: 600;
+  color: #ff6600;
+}
+
+.industry-card-graphic:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* FINAL CTA SECTION */
+.graphic-cta-final {
+  padding: 100px 10%;
+  text-align: center;
+  background-color: #ffe9dc;
+  border-radius: 50px 50px 0 0;
+}
+
+.graphic-cta-final p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* BUTTON STYLES */
+.btn-primary-graphic {
+  background-color: #ff6b1c;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-graphic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255,107,28,0.5);
+}
+
+.btn-outline-graphic {
+  background-color: transparent;
+  border: 2px solid #ff6b1c;
+  color: #ff6b1c;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-graphic:hover {
+  background-color: #ff6b1c;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatGraphic {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}

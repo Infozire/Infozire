@@ -1,0 +1,241 @@
+/* ================= PAGE WRAPPER ================= */
+.uiux-page {
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  background-color: #f2f6fc; /* light modern background */
+}
+
+/* ================= HERO SECTION ================= */
+.uiux-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3); /* pink-magenta gradient */
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.uiux-hero-title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 600px;
+}
+
+.uiux-hero-sub {
+  margin-top: 16px;
+  font-size: 20px;
+  opacity: 0.95;
+  max-width: 550px;
+}
+
+.uiux-cta {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.uiux-hero-img img {
+  width: 450px;
+  border-radius: 25px;
+  filter: drop-shadow(0 15px 30px rgba(255,255,255,0.4));
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.uiux-hero-img img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 25px 50px rgba(255, 255, 255, 0.5);
+}
+
+/* ================= OVERVIEW SECTION ================= */
+.uiux-overview {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.uiux-overview h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.uiux-highlights {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.uiux-highlight-card {
+  flex: 1 1 220px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.uiux-highlight-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(255, 118, 140, 0.3);
+}
+
+/* ================= FEATURES GRID ================= */
+.uiux-features {
+  padding: 100px 10%;
+}
+
+.uiux-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.uiux-feature-card {
+  background: linear-gradient(145deg, #fff, #ffe6f0);
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.uiux-feature-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(255, 126, 179, 0.4);
+}
+
+/* ================= INDUSTRIES ================= */
+.uiux-industries {
+  padding: 100px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.uiux-industry-card {
+  flex: 1 1 200px;
+  background: linear-gradient(135deg, #ffe6f0, #ffcce5);
+  border-radius: 25px;
+  padding: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: #1a1a1a;
+  box-shadow: 0 15px 35px rgba(255, 126, 179, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.uiux-industry-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(255, 126, 179, 0.4);
+}
+
+/* ================= PROCESS ================= */
+.uiux-process {
+  padding: 100px 10%;
+}
+
+.uiux-process-step {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.uiux-process-step:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(255, 118, 140, 0.3);
+}
+
+/* ================= PORTFOLIO ================= */
+.uiux-portfolio {
+  padding: 100px 10%;
+}
+
+.uiux-portfolio-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(255, 118, 140, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.uiux-portfolio-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(255, 126, 179, 0.5);
+}
+
+.uiux-portfolio-card img {
+  border-radius: 20px;
+  width: 400px;
+}
+
+/* ================= TESTIMONIALS ================= */
+.uiux-testimonials {
+  padding: 100px 10%;
+  text-align: center;
+  font-style: italic;
+  color: #333;
+}
+
+/* ================= CTA ================= */
+.uiux-cta {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.uiux-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* BUTTONS */
+.btn-primary, .btn-primary-large, .btn-outline {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.btn-primary:hover, .btn-primary-large:hover, .btn-outline:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 118, 140, 0.5);
+}
+
+/* ================= ANIMATIONS ================= */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}

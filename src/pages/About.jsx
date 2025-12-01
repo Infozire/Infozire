@@ -1,110 +1,111 @@
-import { motion } from "framer-motion";
-import { Zap, Globe, Lightbulb, Handshake } from "lucide-react";
+import React, { useEffect } from "react";
+import "./AboutUs.css";
+import Navbar from "../pages/Navbar";
 
-export default function About() {
+const About = () => {
+
+  // Scroll Reveal Animation
+  useEffect(() => {
+    const elements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  }, []);
+
   return (
-    <section className="relative bg-gradient-to-b from-gray-900 to-black text-white py-20 px-6">
-      <div className="container mx-auto max-w-5xl">
-        {/* Title */}
-        <motion.h1
-          className="text-4xl md:text-6xl font-bold text-center mb-12"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          INFO<span className="text-orange-500">ZIRE</span>
-        </motion.h1>
+    <>
+      <Navbar />
+      <div className="aboutmodern">
 
-        {/* Who We Are */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Who We Are</h2>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            Infozire is a technology company founded by a young entrepreneur with a bold vision: to make digital transformation affordable, scalable, and impactful.
-          </p>
-        </motion.div>
+        {/* HERO SECTION */}
+        <section className="am-hero">
+          <div className="am-hero-content fade-down reveal">
+            <h1 className="am-title">About Infozire Private Limited</h1>
+            <p className="am-subtitle">
+              A modern technology company committed to building powerful, reliable,
+              and future-ready digital solutions.
+            </p>
+          </div>
+        </section>
 
-        {/* CEO Section */}
-        <motion.div
-          className="bg-gray-800/60 rounded-2xl shadow-lg p-8 md:p-12 mb-16"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-            Our <span className="text-orange-500">CEO</span>– PRABURAM
-          </h2>
-          <p className="text-lg text-gray-300 leading-relaxed">
-            At the heart of Infozire is <span className="font-bold text-white">Praburam</span>, 
-            a dynamic leader with outstanding expertise in technology and management. 
-            With extraordinary skills to analyze, strategize, and execute ideas swiftly, 
-            he represents a new generation of leadership that inspires confidence and progress.
-          </p>
-          <br/>
-          <p>We empower businesses with solutions in AI, software, cloud, websites, and marketing, built for simplicity and growth.</p>
-        </motion.div>
-    
+        {/* ABOUT SECTION */}
+        <section className="am-section">
+          <div className="am-block fade-left reveal">
+            <h2>
+              Who <span className="text-orange-500">We</span> Are
+            </h2>
+            <p>
+              Founded in <strong>September 2024</strong>, Infozire was built to deliver
+              high-quality and innovative digital products that help businesses grow and transform.
+            </p>
+            <p>
+              With 5+ years of IT industry experience, Founder{" "}
+              <strong>
+                <span className="text-orange-500 text-2xl font-bold">Praburam </span>
+              </strong>
+              created a brand focused on trust, creativity, and next-level execution.
+            </p>
+          </div>
+        </section>
 
-        {/* Values */}
-        <motion.div
-          className="grid md:grid-cols-2 gap-8"
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: { opacity: 0 },
-            show: { opacity: 1, transition: { staggerChildren: 0.2 } },
-          }}
-        >
-          <motion.div
-            className="flex items-start gap-4 bg-gray-800/40 p-6 rounded-xl shadow hover:shadow-lg transition"
-            variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
-          >
-            <Zap className="text-yellow-400 w-8 h-8" />
-            <div>
-              <h3 className="text-xl font-semibold">Mission</h3>
-              <p className="text-gray-400">To democratize technology and make innovation accessible to every business.
-</p>
-            </div>
-          </motion.div>
+        {/* SPLIT CARDS */}
+        <section className="am-split">
+          <div className="am-split-card fade-up reveal">
+            <h2>Our Mission</h2>
+            <p>
+              To deliver innovative and reliable digital solutions that empower businesses
+              to grow, automate, and succeed — combining creativity, technology, and perfect execution.
+            </p>
+          </div>
 
-          <motion.div
-            className="flex items-start gap-4 bg-gray-800/40 p-6 rounded-xl shadow hover:shadow-lg transition"
-            variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
-          >
-            <Globe className="text-blue-400 w-8 h-8" />
-            <div>
-              <h3 className="text-xl font-semibold">Global Vision</h3>
-              <p className="text-gray-400">A future where even the smallest entrepreneur has the power of advanced digital tools.</p>
-            </div>
-          </motion.div>
+          <div className="am-split-card fade-down reveal">
+            <h2>Our Vision</h2>
+            <p>
+              To become a globally recognized tech brand within 5 years — building world-class products,
+              expanding a skilled team, and launching innovative solutions that shape the future.
+            </p>
+          </div>
+        </section>
 
-          <motion.div
-            className="flex items-start gap-4 bg-gray-800/40 p-6 rounded-xl shadow hover:shadow-lg transition"
-            variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
-          >
-            <Lightbulb className="text-green-400 w-8 h-8" />
-            <div>
-              <h3 className="text-xl font-semibold">Innovation with Purpose</h3>
-              <p className="text-gray-400">Every solution is designed to make real impact.</p>
-            </div>
-          </motion.div>
+        {/* STORY SECTION */}
+        <section className="am-section">
+          <div className="am-block fade-right reveal">
+            <h2>
+              Our <span className="text-orange-500">Story</span>
+            </h2>
 
-          <motion.div
-            className="flex items-start gap-4 bg-gray-800/40 p-6 rounded-xl shadow hover:shadow-lg transition"
-            variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}
-          >
-            <Handshake className="text-purple-400 w-8 h-8" />
-            <div>
-              <h3 className="text-xl font-semibold">Partnership with Trust</h3>
-              <p className="text-gray-400">We build long-term collaborations based on trust.</p>
-            </div>
-          </motion.div>
-        </motion.div>
+            <p>
+              Infozire began with a strong dream — to build a company that delivers genuine value
+              and transparent execution. After 5 years in the IT industry, Praburam realized the major gaps:
+            </p>
+
+          <ul className="am-list">
+            <li>Transparency</li>
+            <li>Skilled Execution</li>
+            <li>Passion</li>
+            <li>Client-first Approach</li>
+            <li>Innovation-driven Work</li>
+          </ul>
+
+            <p>
+              This vision shaped Infozire — a company where creativity meets engineering,
+              and ideas become powerful digital products.
+            </p>
+          </div>
+        </section>
       </div>
-    </section>
+    </>
   );
-}
+};
+
+export default About;

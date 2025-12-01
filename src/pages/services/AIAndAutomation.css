@@ -1,0 +1,503 @@
+/* ===============================
+   GLOBAL PAGE STYLE
+==================================*/
+.ai-page {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: #0a0f1e;
+  background-image: radial-gradient(circle at 20% 30%, rgba(0,255,255,0.05), transparent 70%);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-page::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('path-to-tech-grid.png');
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* ===============================
+   HERO SECTION
+==================================*/
+/*==================================*/
+/* AI HERO SECTION */
+.ai-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;  /* <<< Added spacing between image & content */
+  padding: 100px 10%;
+  background: linear-gradient(120deg, #0b1a2a, #1c1f3a);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.ai-hero-content {
+  max-width: 600px;
+  
+  /* Glass Effect */
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+  padding: 35px 30px;   /* Slightly increased for better structure */
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  /* Smooth fade */
+  animation: fadeInContent 1s ease forwards;
+}
+
+.ai-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #00f0ff;
+  text-shadow: 0 0 15px rgba(0,255,255,0.4);
+  margin-bottom: 15px; /* Better spacing */
+}
+
+.ai-hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.ai-hero-img img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 15px rgba(0,255,255,0.4));
+  animation: floatAI 4s ease-in-out infinite;
+}
+
+/* Smooth floating effect */
+@keyframes floatAI {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Content fade animation */
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ai-hero-sub {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 0.85;
+  color: #cce7ff;
+}
+
+.ai-cta {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+/* HERO IMAGE */
+.ai-hero-img img {
+  width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,255,255,0.3);
+  transition: all 0.5s ease;
+}
+
+.ai-hero-img img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* ===============================
+   OVERVIEW BOXES
+==================================*/
+.ai-overview {
+  padding: 100px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.highlight-box {
+  flex: 1 1 250px;
+  background: rgba(0,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.2);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.highlight-box:hover {
+  transform: translateY(-10px) scale(1.05) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(0,255,255,0.3);
+}
+
+/* ===============================
+   FEATURES GRID
+==================================*/
+.ai-features {
+  padding: 100px 10%;
+  background: rgba(255,255,255,0.02);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: rgba(0,255,255,0.05);
+  border-radius: 20px;
+  padding: 30px 20px;
+  border: 1px solid rgba(0,255,255,0.15);
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,255,255,0.4);
+}
+
+/* ===============================
+   INDUSTRY CARDS
+==================================*/
+.ai-industries {
+  padding: 100px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.industry-card {
+  flex: 1 1 220px;
+  background: linear-gradient(135deg, #00f0ff10, #6610f230);
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.industry-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 40px rgba(0,255,255,0.3);
+}
+
+/* ===============================
+   AI PROCESS (COMPACT MODE)
+==================================*/
+.ai-process.compact {
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.ai-process.compact h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.process-timeline {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.step {
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0,255,255,0.4);
+}
+
+/* ===============================
+   PORTFOLIO FIXED ALIGNMENT
+==================================*/
+.ai-portfolio {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.ai-portfolio h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.portfolio-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.portfolio-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0,255,255,0.25);
+}
+
+.portfolio-text {
+  text-align: left;
+  color: #e8faff;
+}
+
+.portfolio-text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.portfolio-text ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .portfolio-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .portfolio-text {
+    text-align: center;
+  }
+}
+
+/* ===============================
+   CTA BUTTONS
+==================================*/
+.ai-cta-buttons button {
+  padding: 18px 40px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #00f0ff, #6610f2);
+  box-shadow: 0 0 20px rgba(0,255,255,0.5);
+  transition: 0.4s;
+}
+
+.ai-cta-buttons button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0,255,255,0.7);
+}
+
+/* ===============================
+   SECTION STYLE (TITLE + DESC)
+==================================*/
+.enhanced-layout {
+  padding: 100px 8%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00eaff, #6a5bff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.section-desc {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  color: #cce7ff;
+  opacity: 0.9;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+/* GRID LAYOUT FIX */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* NEW NEO GLASS CARDS */
+.neo-card {
+  padding: 22px 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-size: 17px;
+  color: #e8faff;
+  transition: 0.35s;
+}
+
+.neo-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0,255,255,0.25);
+  border-color: rgba(0,255,255,0.4);
+}
+
+.neo-card.industry {
+  background: linear-gradient(145deg, rgba(0,255,255,0.05), rgba(102,16,242,0.2));
+  border: 1px solid rgba(0,255,255,0.25);
+}
+/* Testimonials Section */
+.ai-testimonials {
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.testimonial-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-text {
+  font-size: 1.15rem;
+  color: #e2e2e2;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.client-name {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #ff8c3e;
+  font-weight: 600;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* CTA SECTION */
+.ai-cta {
+  width: 100%;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffffff, #f7f7f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.ai-cta-container {
+  max-width: 850px;
+  text-align: center;
+}
+
+.ai-cta h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.ai-cta p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* CTA BUTTONS */
+.ai-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* Primary button */
+.btn-primary {
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  background: #2b7bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* Outline button */
+.btn-outline {
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: transparent;
+  border: 2px solid #2b7bff !important;   /* BLUE = visible everywhere */
+  color: #2b7bff !important;               /* text visible */
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(43, 123, 255, 0.10);
+  transform: translateY(-2px);
+}
+
+
+.btn-primary-large {
+  padding: 14px 35px;
+  background: #000;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary-large:hover {
+  background: #333;
+}

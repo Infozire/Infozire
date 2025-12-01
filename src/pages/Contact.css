@@ -1,0 +1,82 @@
+.contact-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to right, #1f2937, #111827);
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-container p {
+  margin-bottom: 2rem;
+  color: #cbd5e1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgba(255,255,255,0.05);
+  color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 2px #f97316;
+}
+
+.btn-primary {
+  padding: 1rem;
+  background-color: #f97316;
+  color: #fff;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #fb923c;
+}
+
+/* Success message */
+.success-msg {
+  color: #34d399;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
