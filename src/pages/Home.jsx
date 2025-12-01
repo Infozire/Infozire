@@ -12,7 +12,7 @@ import aws from "../assets/aws.jpg"
 import next from "../assets/next.jpg"
 import docker from "../assets/docker.jpg"
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 export default function App() {
     const [open, setOpen] = useState(false);
 
@@ -59,43 +59,52 @@ export default function App() {
                         platforms, and digital branding help companies grow faster and stay
                         future-ready.
                     </motion.p>
+<motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 1.1, duration: 1.5, ease: "easeOut" }}
+    className="flex gap-4 pt-4"
+>
+    <Link
+        to="/services"
+        className="px-6 py-3 bg-blue-500 text-black font-semibold rounded-xl hover:bg-blue-400 shadow-lg transition"
+    >
+        Start a Project
+    </Link>
+    <Link
+        to="/features"
+        className="px-6 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition"
+    >
+        See Features
+    </Link>
+</motion.div>
 
-                    {/* BUTTONS */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.1, duration: 1.5, ease: "easeOut" }}
-                        className="flex gap-4 pt-4"
-                    >
-                        <a className="px-6 py-3 bg-blue-500 text-black font-semibold rounded-xl hover:bg-blue-400 shadow-lg transition">
-                            Start a Project
-                        </a>
-                        <a className="px-6 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition">
-                            See Features
-                        </a>
-                    </motion.div>
-
-                    {/* TAGS */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.3, duration: 1.5, ease: "easeOut" }}
-                        className="flex gap-4 pt-3 text-sm"
-                    >
-                        {["AI", "Software", "Cloud", "Digital"].map((item, i) => (
-                            <motion.span
-                                key={item}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 1.4 + i * 0.25, duration: 1.2, ease: "easeOut" }}
-                                className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300"
-                            >
-                                {item}
-                            </motion.span>
-                        ))}
-                    </motion.div>
-                </motion.div>
-
+{/* TAGS */}
+<motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 1.3, duration: 1.5, ease: "easeOut" }}
+    className="flex gap-4 pt-3 text-sm"
+>
+    {[
+        { name: "AI", path: "/services/ai-solutions" },
+        { name: "Software", path: "/services/software-web-development" },
+        { name: "Cloud", path: "/services/cloud-devops" },
+        { name: "Digital", path: "/services/digital-branding" },
+    ].map((item, i) => (
+        <motion.span
+            key={item.name}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4 + i * 0.25, duration: 1.2, ease: "easeOut" }}
+            className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 cursor-pointer"
+            onClick={() => window.location.href = item.path}
+        >
+            {item.name}
+        </motion.span>
+    ))}
+</motion.div>
+</motion.div>
                 {/* RIGHT */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.85 }}
@@ -213,7 +222,7 @@ export default function App() {
             </main>
 
             <footer className="border-t border-white/10 py-8 text-center text-sm text-slate-400">
-                © {new Date().getFullYear()} MyCompany. All rights reserved.
+                © {new Date().getFullYear()} Infozire. All rights reserved.
             </footer>
         </div>
     );

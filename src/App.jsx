@@ -1,4 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./pages/ScrollToTop.jsx";
+import Layout from "./pages/Layout.jsx";
+
+// Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -22,35 +26,34 @@ import EcommerceDevelopment from "./pages/services/EcommerceDevelopment.jsx";
 import ITConsulting from "./pages/services/ITConsulting.jsx";
 import APIDevelopment from "./pages/services/APIDevelopment.jsx";
 import TestingQA from "./pages/services/TestingQA.jsx";
-import ScrollToTop from "./pages/ScrollToTop.jsx";
+
 export default function App() {
   return (
     <Router>
-       <ScrollToTop />
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/features" element={<Features />} />
-        <Route path="/blog" element={<Blogs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/hero" element={<HeroSection />} />
-        <Route path="/services/software-web-development" element={<SoftwareDevelopment />} />
-        <Route path="/services/website-development" element={<WebsiteDevelopment />} />
-        <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
-        <Route path="/services/cloud-devops" element={<CloudSolutions />} />
-        <Route path="/services/digital-branding" element={<DigitalMarketing />} />
-        <Route path="/services/ai-solutions" element={<AISolutions />} />
-        <Route path="/services/ai-automation" element={<AIAndAutomation />} />
-        <Route path="/services/ui-ux-design" element={<UIUXPage />} />
-        <Route path="/services/maintenance-support" element={<MaintenanceSupport />} />
-        <Route path="/services/graphic-design" element={<GraphicDesign />} />
-        <Route path="/services/video-editing" element={<VideoEditing />} />
-        <Route path="/services/ecommerce-development" element={<EcommerceDevelopment />} />
-        <Route path="/services/it-consulting" element={<ITConsulting />} />
-        <Route path="/services/api-development" element={<APIDevelopment />} />
-        <Route path="/services/testing-qa" element={<TestingQA />} />
-
+        <Route path="/home" element={<Layout><Home /></Layout>} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/services" element={<Layout><Services /></Layout>} />
+        <Route path="/features" element={<Layout><Features /></Layout>} />
+        <Route path="/blog" element={<Layout><Blogs /></Layout>} />
+        <Route path="/contact" element={<Layout><Contact /></Layout>} />
+        <Route path="/hero" element={<Layout><HeroSection /></Layout>} />
+        <Route path="/services/software-web-development" element={<Layout><SoftwareDevelopment /></Layout>} />
+        <Route path="/services/website-development" element={<Layout><WebsiteDevelopment /></Layout>} />
+        <Route path="/services/mobile-app-development" element={<Layout><MobileAppDevelopment /></Layout>} />
+        <Route path="/services/cloud-devops" element={<Layout><CloudSolutions /></Layout>} />
+        <Route path="/services/digital-branding" element={<Layout><DigitalMarketing /></Layout>} />
+        <Route path="/services/ai-solutions" element={<Layout><AISolutions /></Layout>} />
+        <Route path="/services/ai-automation" element={<Layout><AIAndAutomation /></Layout>} />
+        <Route path="/services/ui-ux-design" element={<Layout><UIUXPage /></Layout>} />
+        <Route path="/services/maintenance-support" element={<Layout><MaintenanceSupport /></Layout>} />
+        <Route path="/services/graphic-design" element={<Layout><GraphicDesign /></Layout>} />
+        <Route path="/services/video-editing" element={<Layout><VideoEditing /></Layout>} />
+        <Route path="/services/ecommerce-development" element={<Layout><EcommerceDevelopment /></Layout>} />
+        <Route path="/services/it-consulting" element={<Layout><ITConsulting /></Layout>} />
+        <Route path="/services/api-development" element={<Layout><APIDevelopment /></Layout>} />
+        <Route path="/services/testing-qa" element={<Layout><TestingQA /></Layout>} />
       </Routes>
     </Router>
   );

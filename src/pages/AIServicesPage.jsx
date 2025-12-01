@@ -43,16 +43,6 @@ const AIServicesPage = () => {
     >
       🚀 Explore AI Solutions with Infozire
     </button>
-
-            <section className="mt-16 bg-gray-800 rounded-xl p-8 shadow-lg">
-                <h3 className="text-xl font-semibold text-orange-500 mb-4">₹1 Post Generator – Affordable Branding for Everyone</h3>
-                <p className="text-slate-300 mb-4">
-                    Create and download posters instantly for just ₹1. Multilingual, easy to use, and built for India’s businesses.
-                </p>
-                <button className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
-                    👉 Try for ₹1 Now
-                </button>
-            </section>
         </div>
     );
 };

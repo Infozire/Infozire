@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-8 py-4 
           bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 
           backdrop-blur-lg shadow-lg">
-          
+
           {/* Logo + Name */}
           <div className="flex items-center gap-3">
             <img
@@ -39,32 +39,28 @@ const Navbar = () => {
           </button>
 
           {/* Desktop Links */}
-     <nav className="hidden md:flex items-center gap-8 text-white font-medium">
-<a className="mr-6"    href="/">
-  <span className="px-3 py-1  text-orange-400 rounded-full">
-    Home
-  </span>
-</a>
+          <nav className="hidden md:flex items-center gap-8 text-white font-medium">
 
 
 
-  {["About", "Services","Features",  "Blog","Contact"].map((item) => (
-    <a
-      key={item}
-      href={`/${item.toLowerCase()}`}
-      className="relative group transition-all duration-300"
-    >
-      {item}
-      <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
-    </a>
-  ))}
-  <a
-    href="#"
-    className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
-  >
-    Get Started
-  </a>
-</nav>
+
+            {["Home", "About", "Services", "Features", "Blog", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`/${item.toLowerCase()}`}
+                className="relative group transition-all duration-300"
+              >
+                {item}
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+              </a>
+            ))}
+            <a
+              href="#"
+              className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+            >
+              Get Started
+            </a>
+          </nav>
 
         </div>
       </header>
@@ -85,7 +81,7 @@ const Navbar = () => {
         </div>
 
         <nav className="flex flex-col p-4 gap-4">
-          {["Features", "About", "Services", "Blog", "Contact"].map((item) => (
+          {["Home", "Features", "About", "Services", "Blog", "Contact"].map((item) => (
             <a
               key={item}
               href={`/${item.toLowerCase()}`}
