@@ -44,22 +44,24 @@ const Navbar = () => {
 
 
 
-            {["Home", "About", "Services", "Features", "Blog", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`/${item.toLowerCase()}`}
-                className="relative group transition-all duration-300"
-              >
-                {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
-              </a>
-            ))}
-            <a
-              href="#"
-              className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
-            >
-              Get Started
-            </a>
+      {["Home", "About", "Services", "Features", "Blog", "Contact"].map((item) => (
+  <a
+    key={item}
+    href={item === "Home" ? "/" : `/${item.toLowerCase()}`} // Home goes to "/", others stay as "/about", "/services", etc.
+    className="relative group transition-all duration-300"
+  >
+    {item}
+    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+  </a>
+))}
+
+<a
+  href="#"
+  className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+>
+  Get Started
+</a>
+
           </nav>
 
         </div>

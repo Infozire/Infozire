@@ -32,7 +32,7 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path="/home" element={<Layout><Home /></Layout>} />
+        <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/about" element={<Layout><About /></Layout>} />
         <Route path="/services" element={<Layout><Services /></Layout>} />
         <Route path="/features" element={<Layout><Features /></Layout>} />
