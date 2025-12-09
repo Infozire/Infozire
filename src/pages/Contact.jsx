@@ -46,7 +46,7 @@ const Contact = () => {
       <Navbar />
       <section className="contact-section">
         <div className="contact-container reveal fade-up">
-          <h2>Contact <span className="text-orange-600">Us</span></h2>
+          <h2 className="text-l font-extrabold  mb-4 pb-8 tracking-tight reveal">Contact <span className="text-orange-600">Us</span></h2>
           <p>Have a question or project in mind? Let’s connect!</p>
 
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -89,7 +89,7 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button type="submit" className="btn-primary">
+            <button type="submit" className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">
               Send Message
             </button>
 

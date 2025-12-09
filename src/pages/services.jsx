@@ -52,7 +52,7 @@ const Services = () => {
           {/* LEFT SIDE */}
           <div className="left-side">
             <h1 className="am-title fade-up reveal">
-              Our <span className="text-orange-600">Services</span>
+              Our <span className="am-title">Services</span>
             </h1>
 
             <div className="services-list">

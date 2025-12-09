@@ -67,8 +67,8 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-white mb-3">Contact Us</h3>
           <p>Email: <a href="mailto:info@infozire.com" className="hover:text-orange-500 transition">info@infozire.com</a></p>
-          <p>Phone: <a href="tel:+911234567890" className="hover:text-orange-500 transition">+91 123 456 7890</a></p>
-          <p>Address: 123 Infozire Tech Park, Chennai, India</p>
+          <p>Phone: <a href="tel:+911234567890" className="hover:text-orange-500 transition">+91 8190941584</a></p>
+          <p>Address: Infozire-26/27 North Krishna Nagar, Pudhucherry, India</p>
 
           <div className="flex gap-4 mt-4 text-gray-400">
             <a href="#" className="hover:text-white transition"><FaLinkedin size={20} /></a>

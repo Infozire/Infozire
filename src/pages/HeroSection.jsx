@@ -20,9 +20,9 @@ const HeroSection = () => {
             {/* Center Content */}
             <div className="relative z-10 flex flex-col justify-center items-center text-white h-full text-center px-4">
                 {/* <h1 className="text-3xl tracking-widest mb-4">INFOZIRE</h1> */}
-                <h1 className="text-5xl font-bold mb-4">Empowering Businesses with Digital Solutions</h1>
+                <h1 className="text-5xl font-bold mb-4">Smart Digital Solutions for Modern Businesses</h1>
                 <p className="block text-slate-50 md:text-2xl font-normal italic mt-4">
-                    At Infozire, we build smart, scalable, and secure digital products that help your business grow.
+                    At Infozire, Empowering companies with reliable, efficient, and scalable technology services that simplify operations and accelerate growth.
                 </p>
             </div>
         </section>

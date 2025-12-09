@@ -44,14 +44,14 @@ const About = () => {
             <h2>
               Who <span className="text-orange-500">We</span> Are
             </h2>
-            <p>
+            <p className="text-xl mb-4 tracking-tight reveal">
               Founded in <strong>September 2024</strong>, Infozire was built to deliver
               high-quality and innovative digital products that help businesses grow and transform.
             </p>
-            <p>
-              With 5+ years of IT industry experience, Founder{" "}
-              <strong>
-                <span className="text-orange-500 text-2xl font-bold">Praburam </span>
+            <p className="text-xl  mb-4 tracking-tight reveal">
+              With 5+ years of IT industry experience, Founder
+              <strong >
+             <span className="text-orange-600"> Praburam </span>
               </strong>
               created a brand focused on trust, creativity, and next-level execution.
             </p>
@@ -61,7 +61,7 @@ const About = () => {
         {/* SPLIT CARDS */}
         <section className="am-split">
           <div className="am-split-card fade-up reveal">
-            <h2>Our Mission</h2>
+            <h2><span className="text-white">Our</span> <span className="text-orange-500">Mission</span></h2>
             <p>
               To deliver innovative and reliable digital solutions that empower businesses
               to grow, automate, and succeed — combining creativity, technology, and perfect execution.
@@ -69,7 +69,7 @@ const About = () => {
           </div>
 
           <div className="am-split-card fade-down reveal">
-            <h2>Our Vision</h2>
+            <h2><span className="text-white">Our</span> <span className="text-orange-500">Vision</span></h2>
             <p>
               To become a globally recognized tech brand within 5 years — building world-class products,
               expanding a skilled team, and launching innovative solutions that shape the future.
@@ -84,7 +84,7 @@ const About = () => {
               Our <span className="text-orange-500">Story</span>
             </h2>
 
-            <p>
+            <p className="text-xl  mb-4 tracking-tight reveal">
               Infozire began with a strong dream — to build a company that delivers genuine value
               and transparent execution. After 5 years in the IT industry, Praburam realized the major gaps:
             </p>

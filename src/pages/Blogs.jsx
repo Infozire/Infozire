@@ -16,7 +16,7 @@ const Blogs = () => {
         </p>
 
         <div className="blogs-hero-btns">
-          <button className="hero-btn primary">Read Latest Articles</button>
+          <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">Read Latest Articles</button>
           <button className="hero-btn outline">Subscribe to Newsletter</button>
         </div>
       </section>
@@ -64,7 +64,7 @@ const Blogs = () => {
               efficiently.
             </p>
             <p className="blog-meta">By Praburam • Nov 30, 2025</p>
-            <button className="read-more-btn">Read More →</button>
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">Read More →</button>
           </div>
 
           {/* BLOG CARD 2 */}
@@ -82,7 +82,7 @@ const Blogs = () => {
               the essential principles followed by top designers worldwide.
             </p>
             <p className="blog-meta">By Infozire Team • Nov 21, 2025</p>
-            <button className="read-more-btn">Read More →</button>
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">Read More →</button>
           </div>
 
           {/* BLOG CARD 3 */}
@@ -100,7 +100,7 @@ const Blogs = () => {
               right time to build your business app.
             </p>
             <p className="blog-meta">By Infozire Insights • Oct 14, 2025</p>
-            <button className="read-more-btn">Read More →</button>
+            <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">Read More →</button>
           </div>
 
         </div>
