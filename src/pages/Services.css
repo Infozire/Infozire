@@ -7,6 +7,7 @@
   --white: #ffffff;
 }
 
+
 /* =============== MAIN SECTION =============== */
 .services-section {
   width: 100%;
@@ -55,7 +56,12 @@
   opacity: 1;
   transform: translateX(0);
 }
-
+.am-title {
+  font-size: 52px;
+  font-weight: 600;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
 /* ------------------------
    Zoom In
 ------------------------- */
