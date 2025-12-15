@@ -51,7 +51,7 @@ const Blogs = () => {
           {/* BLOG CARD 1 */}
           <div className="blog-card">
             <img
-              src="https://images.unsplash.com/photo-1526378722370-54e0bff2f8a0"
+              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
               alt="AI"
               className="blog-img"
             />
@@ -64,8 +64,11 @@ const Blogs = () => {
               efficiently.
             </p>
             <p className="blog-meta">By Praburam • Nov 30, 2025</p>
-            <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">Read More →</button>
-          </div>
+<div className="flex justify-center mt-4 mb-4">
+  <button className="bg-orange-500 text-white px-6  py-3 rounded-xl font-semibold hover:bg-orange-600 transition">
+    Read More →
+  </button>
+</div>          </div>
 
           {/* BLOG CARD 2 */}
           <div className="blog-card">
@@ -82,8 +85,11 @@ const Blogs = () => {
               the essential principles followed by top designers worldwide.
             </p>
             <p className="blog-meta">By Infozire Team • Nov 21, 2025</p>
-            <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">Read More →</button>
-          </div>
+<div className="flex justify-center mt-4 mb-4">
+  <button className="bg-orange-500 text-white px-6  py-3 rounded-xl font-semibold hover:bg-orange-600 transition">
+    Read More →
+  </button>
+</div>          </div>
 
           {/* BLOG CARD 3 */}
           <div className="blog-card">
@@ -100,7 +106,11 @@ const Blogs = () => {
               right time to build your business app.
             </p>
             <p className="blog-meta">By Infozire Insights • Oct 14, 2025</p>
-            <button className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">Read More →</button>
+<div className="flex justify-center mt-4 mb-4">
+  <button className="bg-orange-500 text-white px-6  py-3 rounded-xl font-semibold hover:bg-orange-600 transition">
+    Read More →
+  </button>
+</div>
           </div>
 
         </div>

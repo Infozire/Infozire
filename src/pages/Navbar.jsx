@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom"; // <-- Import Link
 import logo from "../assets/infozire.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const menuItems = ["HOME", "ABOUT", "SERVICES", "FEATURES", "BLOG", "CONTACT"];
 
   return (
     <>
@@ -40,28 +43,23 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <nav className="hidden md:flex items-center gap-8 text-white font-medium">
+            {menuItems.map((item) => (
+              <Link
+                key={item}
+                to={item === "HOME" ? "/" : `/${item.toLowerCase()}`}
+                className="relative group transition-all duration-300"
+              >
+                {item}
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            ))}
 
-
-
-
-      {["HOME", "ABOUT", "SERVICES", "FEATURES", "BLOG", "CONTACT"].map((item) => (
-  <a
-    key={item}
-    href={item === "Home" ? "/" : `/${item.toLowerCase()}`} // Home goes to "/", others stay as "/about", "/services", etc.
-    className="relative group transition-all duration-300"
-  >
-    {item}
-    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
-  </a>
-))}
-
-<a
-  href="#"
-  className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
->
-  GET STARTED
-</a>
-
+            <Link
+              to="/services"
+              className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+            >
+              GET STARTED
+            </Link>
           </nav>
 
         </div>
@@ -83,22 +81,23 @@ const Navbar = () => {
         </div>
 
         <nav className="flex flex-col p-4 gap-4">
-          {["HOME", "ABOUT", "SERVICES", "FEATURES", "BLOG", "CONTACT"].map((item) => (
-            <a
+          {menuItems.map((item) => (
+            <Link
               key={item}
-              href={`/${item.toLowerCase()}`}
+              to={item === "HOME" ? "/" : `/${item.toLowerCase()}`}
               className="hover:text-blue-400 transition-colors duration-300"
               onClick={() => setOpen(false)}
             >
               {item}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#"
+          <Link
+            to="/services"
             className="mt-4 px-5 py-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow-md hover:scale-105 transition-transform"
+            onClick={() => setOpen(false)}
           >
             Get Started
-          </a>
+          </Link>
         </nav>
       </div>
 

@@ -63,91 +63,83 @@ export default function App() {
     <div className="relative w-full px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT SIDE – CONTENT */}
-        <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.8, ease: "easeOut" }}
-            className="space-y-6"
+      <motion.div
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.3 }} // animate when 30% of element is visible, only once
+    transition={{ duration: 1.8, ease: "easeOut" }}
+    className="space-y-6"
+>
+    <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ delay: 0.4, duration: 1.5, ease: "easeOut" }}
+        className="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900"
+    >
+        Technology That Works
+        <span className="block text-4xl text-orange-600 italic mt-1">
+            Smarter for You ✨
+        </span>
+    </motion.h1>
+
+    <motion.p
+        initial={{ opacity: 0, y: 45 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ delay: 0.7, duration: 1.5, ease: "easeOut" }}
+        className="text-slate-600 text-lg leading-relaxed max-w-lg"
+    >
+        At <span className="font-semibold text-orange-500">Infozire</span>, every solution is designed with a single goal—helping businesses work smarter. Whether you are starting a new venture or strengthening existing operations, our digital services deliver clarity, performance, and long-term value.
+    </motion.p>
+
+    <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ delay: 1.1, duration: 1.5, ease: "easeOut" }}
+        className="flex gap-4 pt-4"
+    >
+        <Link
+            to="/services"
+            className="px-6 py-3 rounded-xl font-semibold text-white 
+            bg-gradient-to-r from-orange-500 to-indigo-600 shadow-lg 
+            hover:shadow-indigo-500/30 hover:-translate-y-1 transition"
         >
-            <motion.h1
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 1.5, ease: "easeOut" }}
-                className="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900"
-            >
-                Technology That Works
-                <span className="block text-4xl text-orange-600 italic mt-1">
-                    Smarter for You ✨
-                </span>
-            </motion.h1>
+            Start a Project
+        </Link>
 
-            <motion.p
-                initial={{ opacity: 0, y: 45 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 1.5, ease: "easeOut" }}
-                className="text-slate-600 text-lg leading-relaxed max-w-lg"
-            >
-                At <span className="font-semibold text-orange-500">Infozire</span>, every solution is designed with a single goal—helping businesses work smarter. Whether you are starting a new venture or strengthening existing operations, our digital services deliver clarity, performance, and long-term value.
-            </motion.p>
-
-            <motion.p
-                initial={{ opacity: 0, y: 45 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9, duration: 1.5, ease: "easeOut" }}
-                className="text-slate-600 text-lg leading-relaxed max-w-lg"
-            >
-                We design technology that simplifies, scales, and transforms businesses. Our AI solutions, cloud platforms, and digital branding help companies grow faster and stay future-ready.
-            </motion.p>
-
-            <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.1, duration: 1.5, ease: "easeOut" }}
-                className="flex gap-4 pt-4"
-            >
-                <Link
-                    to="/services"
-                    className="px-6 py-3 rounded-xl font-semibold text-white 
-                    bg-gradient-to-r from-orange-500 to-indigo-600 shadow-lg 
-                    hover:shadow-indigo-500/30 hover:-translate-y-1 transition"
-                >
-                    Start a Project
-                </Link>
-
-                <Link
-                    to="/features"
-                    className="px-6 py-3 border border-slate-300 text-slate-700 rounded-xl 
-                    hover:bg-orange-100 transition"
-                >
-                    See Features
-                </Link>
-            </motion.div>
-        </motion.div>
-
-        {/* RIGHT SIDE – SINGLE IMAGE */}
-        <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8, duration: 1.6, ease: "easeOut" }}
-            className="relative flex justify-center items-center"
+        <Link
+            to="/features"
+            className="px-6 py-3 border border-slate-300 text-slate-700 rounded-xl 
+            hover:bg-orange-100 transition"
         >
-            {/* Soft glow behind image */}
-            <div className="absolute w-80 h-80 bg-gradient-to-tr 
-                            from-orange-400 via-indigo-400 to-cyan-400 
-                            rounded-full blur-3xl opacity-30">
-            </div>
+            See Features
+        </Link>
+    </motion.div>
+</motion.div>
 
-            {/* Main Image */}
-<img
-  src={banner2}
-  alt="AI Technology Illustration"
-  className="relative w-80 md:w-[5000px] lg:w-[560px]
-             scale-y-130 rounded-3xl
-             shadow-2xl hover:scale-105
-             transition duration-500"
-/>
+{/* Right side image */}
+<motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ delay: 0.8, duration: 1.6, ease: "easeOut" }}
+    className="relative flex justify-center items-center"
+>
+    <div className="absolute w-80 h-80 bg-gradient-to-tr 
+                    from-orange-400 via-indigo-400 to-cyan-400 
+                    rounded-full blur-3xl opacity-30">
+    </div>
 
-        </motion.div>
+    <img
+      src={banner2}
+      alt="AI Technology Illustration"
+      className="relative w-80 md:w-[500px] lg:w-[560px]
+                 rounded-3xl shadow-2xl hover:scale-105 transition duration-500"
+    />
+</motion.div>
+
 
     </div>
 </section>
