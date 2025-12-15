@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* COMPANY INFO */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-3">Infozire</h2>
+          <h2 className="text-2xl font-bold text-white mb-3">INFOZIRE</h2>
           <p className="text-gray-400 text-sm">
             We build intelligent, scalable, and future-ready digital solutions — 
             from AI automation to modern software and cloud platforms.
@@ -37,7 +37,7 @@ const Footer = () => {
 
         {/* QUICK LINKS */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-3">Quick Links</h3>
+          <h3 className="text-xl font-semibold text-white mb-3">QUICK LINKS</h3>
           <ul className="space-y-2">
             <li><Link to="/" className="hover:text-orange-500 transition">Home</Link></li>
             <li><Link to="/about" className="hover:text-orange-500 transition">About</Link></li>
@@ -50,7 +50,7 @@ const Footer = () => {
 
         {/* SERVICES */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-3">Our Services</h3>
+          <h3 className="text-xl font-semibold text-white mb-3">OUR SERVICES</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
             {services.slice(0, 7).map((service, i) => (
               <li key={i}>{service}</li>
@@ -65,7 +65,7 @@ const Footer = () => {
 
         {/* CONTACT & SOCIAL */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-3">Contact Us</h3>
+          <h3 className="text-xl font-semibold text-white mb-3">CONTACT US</h3>
           <p>Email: <a href="mailto:info@infozire.com" className="hover:text-orange-500 transition">info@infozire.com</a></p>
           <p>Phone: <a href="tel:+911234567890" className="hover:text-orange-500 transition">+91 8190941584</a></p>
           <p>Address: Infozire-26/27 North Krishna Nagar, Pudhucherry, India</p>

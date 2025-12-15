@@ -44,7 +44,7 @@ const Navbar = () => {
 
 
 
-      {["Home", "About", "Services", "Features", "Blog", "Contact"].map((item) => (
+      {["HOME", "ABOUT", "SERVICES", "FEATURES", "BLOG", "CONTACT"].map((item) => (
   <a
     key={item}
     href={item === "Home" ? "/" : `/${item.toLowerCase()}`} // Home goes to "/", others stay as "/about", "/services", etc.
@@ -59,7 +59,7 @@ const Navbar = () => {
   href="#"
   className="px-5 py-2 rounded-full bg-orange-500 text-white font-semibold shadow-md hover:scale-105 transition-transform"
 >
-  Get Started
+  GET STARTED
 </a>
 
           </nav>
@@ -83,7 +83,7 @@ const Navbar = () => {
         </div>
 
         <nav className="flex flex-col p-4 gap-4">
-          {["Home", "Features", "About", "Services", "Blog", "Contact"].map((item) => (
+          {["HOME", "ABOUT", "SERVICES", "FEATURES", "BLOG", "CONTACT"].map((item) => (
             <a
               key={item}
               href={`/${item.toLowerCase()}`}
