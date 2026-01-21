@@ -6,18 +6,20 @@ const HeroSection = () => {
     <section className="relative w-full h-[75vh] md:h-[600px] overflow-hidden">
 
       {/* Background Video */}
-      <video
-        className="
-          absolute inset-0
-          w-full h-full
-          object-cover
-          object-right md:object-center
-        "
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
+   <video
+  className="
+    absolute inset-0
+    w-full h-full
+    object-cover
+    object-top md:object-center
+    scale-[1.15] md:scale-100
+  "
+  autoPlay
+  loop
+  muted
+  playsInline
+>
+
         <source src={heroVideo} type="video/mp4" />
       </video>
 
