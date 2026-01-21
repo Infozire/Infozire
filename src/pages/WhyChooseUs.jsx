@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ai1 from "../assets/infologo.png";
+import logo from "../assets/infoLogo.png";
 import transparent from "../assets/transparent.png"
 import certified from "../assets/certified.png"
 import scale from "../assets/scale.png"
@@ -117,7 +117,7 @@ const WhyChooseUs = () => {
               className="w-full md:w-80 h-80 bg-gradient-to-tr from-blue-400 via-indigo-500 to-pink-400 rounded-full shadow-xl"
             />
             <motion.img
-              src={ai1}
+              src={logo}
               alt="AI illustration"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
