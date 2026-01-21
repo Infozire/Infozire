@@ -102,7 +102,7 @@ const WhyChooseUs = () => {
           ))}
         </motion.div>
 
-        {/* RIGHT IMAGE */}
+       
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
