@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ai1 from "../assets/infozire.jpeg";
+import ai1 from "../assets/infologo.png";
 import transparent from "../assets/transparent.png"
 import certified from "../assets/certified.png"
 import scale from "../assets/scale.png"
