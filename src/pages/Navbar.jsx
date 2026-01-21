@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import logo from "../assets/infozire.jpeg";
+import logo from "../assets/infoLogo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -26,11 +26,11 @@ const Navbar = () => {
                   className="h-12 w-auto object-contain scale-125 md:scale-150"
                 />
 
-                <h1 className="text-2xl md:text-3xl font-bold tracking-wide text-white">
+               
+              </div>
+ <h1 className="text-2xl md:text-3xl font-bold tracking-wide text-white">
                   INFO<span className="text-orange-500">ZIRE</span>
                 </h1>
-              </div>
-
               {/* Toggle Button (Mobile) */}
               <button
                 onClick={() => setOpen((prev) => !prev)}
