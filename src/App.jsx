@@ -15,7 +15,7 @@ import WebsiteDevelopment from "./pages/services/WebsiteDevelopment";
 import CloudSolutions from "./pages/services/CloudSolutions";
 import DigitalMarketing from "./pages/services/DigitalMarketing.jsx";
 import AISolutions from "./pages/services/AISolutions.jsx";
-import AIServicesPage from './pages/AIServicesPage.jsx';
+import AIServicesPage from "./pages/AIServicesPage.jsx";
 import MobileAppDevelopment from "./pages/services/MobileAppDevelopment.jsx";
 import AIAndAutomation from "./pages/services/AIAndAutomation.jsx";
 import UIUXPage from "./pages/services/UIUXPage.jsx";
@@ -26,6 +26,9 @@ import EcommerceDevelopment from "./pages/services/EcommerceDevelopment.jsx";
 import ITConsulting from "./pages/services/ITConsulting.jsx";
 import APIDevelopment from "./pages/services/APIDevelopment.jsx";
 import TestingQA from "./pages/services/TestingQA.jsx";
+
+// ❤️ Valentine Page
+import ValentineForAnbarasi from "./pages/ValentineForAnbarasi.jsx";
 
 export default function App() {
   return (
@@ -39,6 +42,7 @@ export default function App() {
         <Route path="/blog" element={<Layout><Blogs /></Layout>} />
         <Route path="/contact" element={<Layout><Contact /></Layout>} />
         <Route path="/hero" element={<Layout><HeroSection /></Layout>} />
+
         <Route path="/services/software-web-development" element={<Layout><SoftwareDevelopment /></Layout>} />
         <Route path="/services/website-development" element={<Layout><WebsiteDevelopment /></Layout>} />
         <Route path="/services/mobile-app-development" element={<Layout><MobileAppDevelopment /></Layout>} />
@@ -54,6 +58,9 @@ export default function App() {
         <Route path="/services/it-consulting" element={<Layout><ITConsulting /></Layout>} />
         <Route path="/services/api-development" element={<Layout><APIDevelopment /></Layout>} />
         <Route path="/services/testing-qa" element={<Layout><TestingQA /></Layout>} />
+
+        {/* ❤️ Special Page */}
+        <Route path="/valentine" element={<ValentineForAnbarasi />} />
       </Routes>
     </Router>
   );
