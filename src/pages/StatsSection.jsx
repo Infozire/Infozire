@@ -17,7 +17,7 @@ export default function StatsSection() {
                 >
                     {[
                         {
-                            value: "5+",
+                            value: "6+",
                             title: "Years Experience",
                             desc: "Building reliable digital solutions",
                         },

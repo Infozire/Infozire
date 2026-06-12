@@ -8,7 +8,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/services";
 import Features from "./pages/features";
-import Blogs from "./pages/Blogs";
+// import Blogs from "./pages/Blogs";
+import MeetOurTeam from "./pages/MeetOurTeam.jsx";
 import HeroSection from "./pages/HeroSection";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
 import WebsiteDevelopment from "./pages/services/WebsiteDevelopment";
@@ -36,7 +37,8 @@ export default function App() {
         <Route path="/about" element={<Layout><About /></Layout>} />
         <Route path="/services" element={<Layout><Services /></Layout>} />
         <Route path="/features" element={<Layout><Features /></Layout>} />
-        <Route path="/blog" element={<Layout><Blogs /></Layout>} />
+        {/* <Route path="/blog" element={<Layout><Blogs /></Layout>} /> */}
+        <Route path="/our team" element={<Layout><MeetOurTeam /></Layout>} />
         <Route path="/contact" element={<Layout><Contact /></Layout>} />
         <Route path="/hero" element={<Layout><HeroSection /></Layout>} />
         <Route path="/services/software-web-development" element={<Layout><SoftwareDevelopment /></Layout>} />

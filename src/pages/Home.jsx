@@ -270,7 +270,7 @@ export default function App() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="text-4xl md:text-5xl font-extrabold text-center mb-16 text-indigo-900"
     >
-      Testimonials
+      What Our Clients Say
     </motion.h2>
 
     {/* Testimonials Grid */}
@@ -292,24 +292,24 @@ export default function App() {
         {
           text: `"Infozire Solutions exceeded our expectations! Their team delivered a scalable solution on time and within budget."`,
           img: "https://randomuser.me/api/portraits/men/32.jpg",
-          name: "John Doe",
-          role: "CEO, TechCorp",
+          name: "Govindha Raj",
+          role: "CEO",
           border: "border-indigo-300",
           color: "text-indigo-900",
         },
         {
-          text: `"The team at Infozire is highly professional. Transparent pricing and on-time delivery made working with them seamless."`,
-          img: "https://randomuser.me/api/portraits/women/44.jpg",
-          name: "Jane Smith",
-          role: "Founder, InnovateX",
+          text: `"The vehicle document tracking system developed by Infozire makes it easy to monitor RC, Insurance, and other vehicle documents. Expiry alerts help us stay organized and compliant"`,
+          // img: "https://randomuser.me/api/portraits/women/44.jpg",
+          name: "KalaiKumaran",
+          role: "SPR GROUPS",
           border: "border-pink-300",
           color: "text-pink-700",
         },
         {
-          text: `"Certified developers and scalable tech stack – Infozire delivered exactly what we needed."`,
+          text: `"The billing software developed by Infozire is easy to use, reliable, and has significantly improved our store operations."`,
           img: "https://randomuser.me/api/portraits/men/56.jpg",
-          name: "Michael Lee",
-          role: "CTO, SoftSolutions",
+          name: "Siva",
+          role: "Owner, Sri Sai Krishna Menswear",
           border: "border-green-300",
           color: "text-green-700",
         },
@@ -327,11 +327,11 @@ export default function App() {
           <p className="text-gray-700 mb-6">{item.text}</p>
 
           <div className="flex items-center gap-4">
-            <img
+            {/* <img
               src={item.img}
               alt={item.name}
               className={`w-12 h-12 rounded-full border-2 ${item.border}`}
-            />
+            /> */}
             <div className="text-left">
               <h4 className={`font-bold ${item.color}`}>{item.name}</h4>
               <p className="text-gray-500 text-sm">{item.role}</p>

@@ -49,7 +49,7 @@ const About = () => {
               high-quality and innovative digital products that help businesses grow and transform.
             </p>
             <p className="text-xl  mb-4 tracking-tight reveal">
-              With 5+ years of IT industry experience, Founder
+              With 6+ years of IT industry experience, Founder
               <strong >
              <span className="text-orange-600"> Praburam </span>
               </strong>

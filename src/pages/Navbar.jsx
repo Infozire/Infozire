@@ -6,7 +6,7 @@ import logo from "../assets/infoLogo.png";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const menuItems = ["HOME", "ABOUT", "SERVICES", "FEATURES", "BLOG", "CONTACT"];
+  const menuItems = ["HOME", "ABOUT", "SERVICES", "FEATURES", "OUR TEAM", "CONTACT"];
 
   return (
     <>
