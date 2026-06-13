@@ -2,7 +2,7 @@ import React from "react";
 import "./MeetOurTeam.css";
 import Navbar from "./Navbar";
 import { FaUserCircle, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import teamImage from "../assets/team.jpg";
+import teamImage from "../assets/Team.jpg";
 const teamMembers = [
  {
   name: "Praburam M",
