@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/services";
 import Features from "./pages/features";
-// import Blogs from "./pages/Blogs";
 import MeetOurTeam from "./pages/MeetOurTeam.jsx";
 import HeroSection from "./pages/HeroSection";
 import SoftwareDevelopment from "./pages/services/SoftwareDevelopment";
