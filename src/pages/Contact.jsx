@@ -1,18 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import "../pages/Contact.css";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-    message: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  // Scroll Reveal Animation
   useEffect(() => {
     const elements = document.querySelectorAll(".reveal");
 
@@ -28,74 +18,97 @@ const Contact = () => {
     );
 
     elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
-  };
 
   return (
     <>
       <Navbar />
+
       <section className="contact-section">
         <div className="contact-container reveal fade-up">
-          <h2 className="text-l font-extrabold  mb-4 pb-8 tracking-tight reveal">Contact <span className="text-orange-600">Us</span></h2>
-          <p>Have a question or project in mind? Let’s connect!</p>
+          <h2 className="contact-title">
+            Contact <span>Us</span>
+          </h2>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+          <p className="contact-subtitle">
+            Ready to transform your business with innovative technology?
+            Get in touch with our team today.
+          </p>
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+          <div className="contact-card">
+            <div className="contact-item">
+              <div className="icon">📞</div>
+              <h3>Phone</h3>
+              <p>+91 8608970518</p>
+            </div>
 
-            {/* Mobile Number Input */}
-            <input
-              type="tel"
-              name="mobile"
-              placeholder="Your Mobile Number"
-              value={formData.mobile || ""}
-              onChange={handleChange}
-              pattern="[0-9]{10}" // Only 10 digits
-              maxLength="10"
-              required
-            />
+            <div className="contact-item">
+              <div className="icon">📧</div>
+              <h3>Email</h3>
+              <p>infozirehub@gmail.com</p>
+            </div>
 
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="6"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
+            <div className="contact-item">
+              <div className="icon">📍</div>
+              <h3>Location</h3>
+              <p>Pondicherry, India</p>
+            </div>
 
-            <button type="submit" className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition">
-              Send Message
-            </button>
+            <div className="contact-item">
+              <div className="icon">🕒</div>
+              <h3>Working Hours</h3>
+              <p>Mon - Sat : 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
 
-            {submitted && <p className="success-msg">Message sent successfully!</p>}
-          </form>
+          <div className="contact-buttons">
+            <a href="tel:+918608970518" className="contact-btn">
+              Call Now
+            </a>
 
+            <a
+              href="mailto:infozirehub@gmail.com"
+              className="contact-btn"
+            >
+              Email Us
+            </a>
+
+            <a
+              href="https://wa.me/918608970518"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-btn"
+            >
+              WhatsApp
+            </a>
+          </div>
+
+          <div className="why-choose-us">
+            <h3>Why Choose Infozire?</h3>
+
+            <div className="features">
+              <div>✓ AI & GenAI Solutions</div>
+              <div>✓ Custom Software Development</div>
+              <div>✓ Mobile App Development</div>
+              <div>✓ Cloud & DevOps Services</div>
+              <div>✓ UI/UX Design</div>
+              <div>✓ Digital Transformation</div>
+            </div>
+          </div>
+
+          <div className="map-container">
+           <iframe
+  title="Infozire Location"
+  src="https://maps.google.com/maps?q=Puducherry,India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+  width="100%"
+  height="300"
+  style={{ border: 0, borderRadius: "20px" }}
+  allowFullScreen=""
+  loading="lazy"
+></iframe>
+          </div>
         </div>
       </section>
     </>

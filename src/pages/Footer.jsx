@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* COMPANY INFO */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-3">INFOZIRE</h2>
+          <h2 className="text-2xl font-bold text-white mb-3">INFO<span className="text-orange-500">ZIRE</span></h2>
           <p className="text-gray-400 text-sm">
             We build intelligent, scalable, and future-ready digital solutions — 
             from AI automation to modern software and cloud platforms.
@@ -66,9 +66,9 @@ const Footer = () => {
         {/* CONTACT & SOCIAL */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-3">CONTACT US</h3>
-          <p>Email: <a href="mailto:info@infozire.com" className="hover:text-orange-500 transition">info@infozire.com</a></p>
+          <p>Email: <a href="mailto:infozirehub@gmail.com" className="hover:text-orange-500 transition">infozirehub@gmail.com</a></p>
           <p>Phone: <a href="tel:+911234567890" className="hover:text-orange-500 transition">+91 8190941584</a></p>
-          <p>Address: Infozire-26/27 North Krishna Nagar, Pudhucherry, India</p>
+          <p>Address: Infozire-Pudhucherry, India</p>
 
           <div className="flex gap-4 mt-4 text-gray-400">
             <a href="#" className="hover:text-white transition"><FaLinkedin size={20} /></a>
