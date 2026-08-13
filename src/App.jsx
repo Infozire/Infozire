@@ -29,7 +29,8 @@ import TestingQA from "./pages/services/TestingQA.jsx";
 
 // ❤️ Valentine Page
 import ValentineForAnbarasi from "./pages/ValentineForAnbarasi.jsx";
-
+import SriSaiKrishnaCard
+  from "./pages/visiting-card/SriSaiKrishnaCard";
 export default function App() {
   return (
     <Router>
@@ -62,6 +63,10 @@ export default function App() {
 
         {/* ❤️ Special Page */}
         <Route path="/valentine" element={<ValentineForAnbarasi />} />
+        <Route
+  path="/visiting-card/sri-sai-krishna"
+  element={<SriSaiKrishnaCard />}
+/>
       </Routes>
     </Router>
   );
